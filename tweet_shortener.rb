@@ -10,9 +10,13 @@ def dictionary
 end
 
 def word_substituter(tweet)
-  arr_dic = dictionary.keys
   array = tweet.split
   array.each do |element|
-    if element == dictionary.keys
-      dictionary.keys =
+    dictionary.each do |key, value|
+      if key == element 
+        key = value 
+      end
+    end
+  end
+  tweet 
 end
